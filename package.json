@@ -1,0 +1,32 @@
+{
+  "name": "salon-management-system",
+  "version": "1.0.0",
+  "description": "A comprehensive salon management software",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm start",
+    "backend:install": "cd backend && npm install",
+    "frontend:install": "cd frontend && npm install",
+    "install:all": "npm install && npm run backend:install && npm run frontend:install",
+    "build": "npm run frontend:build && npm run backend:build",
+    "frontend:build": "cd frontend && npm run build",
+    "backend:build": "cd backend && npm run build",
+    "start": "npm run backend:start",
+    "backend:start": "cd backend && npm start",
+    "test": "npm run backend:test && npm run frontend:test",
+    "backend:test": "cd backend && npm test",
+    "frontend:test": "cd frontend && npm test"
+  },
+  "keywords": ["salon", "management", "booking", "appointments", "customers"],
+  "author": "ABP Online",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
